@@ -1,0 +1,14 @@
+html,
+body {
+  font-family: $font_family;
+  font-size: $spacer *2;
+  overflow-x: hidden;   
+}
+
+.icons {
+  color: $main_text_color ;
+}
+
+.icons:hover {
+ color: $primary_color;
+}

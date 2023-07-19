@@ -1,0 +1,582 @@
+//// header ////
+  // vertical menu //
+  .sectionHome {
+    min-height: 100vh;
+    align-items: center;
+    background-color: white;
+   }
+   
+   .header {
+     min-height: 100vh;
+     margin-left: 0px;
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+   }
+   
+   @media (max-width: 991px) {
+    .header {
+      width: 150px;
+      background-color: #fff;
+      border-right: 1px solid $light_color;
+      left: -300px;
+      z-index: 999;
+    }
+   }
+
+
+   .nav-menu {
+     padding: 0;
+     display: block;
+     margin-left: 1vw;
+   
+     & >.nav-menu>ul>li {
+       position: relative;
+       white-space: nowrap;
+       transition: all 0.5s;
+    }
+   }
+   
+   .nav-menu * {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+   }
+   
+   .nav-menu a,
+     .nav-menu  a:focus {
+       display: flex;
+       align-items: center;
+       padding: 10px 19px;
+       margin-bottom: $spacer * 2;
+       border-radius: 50px;
+       background-color: $secondary_color;
+       height: $spacer * 7;
+       width: 100%;
+       overflow: hidden;
+       transition: 0.3s;
+   }  
+     
+   .nav-menu a i,
+   .nav-menu a:focus i {
+    font-size: 50px;
+   }
+     
+   .nav-menu a span,
+     .nav-menu a:focus span {
+       padding: 0 5px 0 7px;
+       color: #45505b;
+   }
+   
+   .nav-menu a:hover,
+   .nav-menu .active,
+   .nav-menu .active:focus,
+   .nav-menu li:hover>a {
+       color: #fff;
+       background: $primary_color;
+   }
+     
+   .nav-menu a:hover span,
+   .nav-menu .active span,
+   .nav-menu .active:focus span,
+   .nav-menu li:hover>a span {
+       color: #fff;
+   }
+     
+   .nav-menu a:hover,
+   .nav-menu li:hover>a {
+       width: 100%;
+       color: #fff;
+   }
+     
+   .nav-menu a:hover span,
+   .nav-menu li:hover>a span {
+       display: block;
+   }
+     
+   @media (min-width: 992px) {
+     
+     .nav-menu a,
+     .nav-menu a:focus {
+       width: 56px;
+   }
+   
+     .nav-menu a span,
+     .nav-menu a:focus span {
+       display: none;
+       color: #fff;
+   }
+   }
+   // h1 & p & img //
+.information {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-left: 3vw;
+    margin-top: 3vh;
+  
+    & >img {
+      width: 50%;
+  
+      @media screen and (max-width: 1170px) {
+       width: 40%;
+      }
+
+      @media screen and (max-width:900px) {
+      width: 90%;
+      padding-left: 6vw;
+     }
+    }
+    
+    & > div {
+      @media screen and (max-width:900px) {
+        width: 100%;
+        padding: 0 30vw;
+        align-items: center;
+       }
+
+       @media screen and (max-width:760px) {
+        width: 100%;
+        padding: 0 25vw;
+        align-items: center;
+       }
+
+       @media screen and (max-width:596px) {
+        width: 100%;
+        padding: 0 20vw;
+        align-items: center;
+       }
+    }
+
+    &>div>h1 {
+      color: $main_text_color;
+      font-weight: 700;
+      font-size: $spacer * 6;
+      margin-bottom: 3.2vh;
+      align-items: center;
+  
+      @media screen and (max-width: 1170px) {
+        font-size: $spacer * 4;
+       }
+    }
+  
+    &>div>h4 {
+      color: $light_text_color;
+      font-weight: 300;
+      font-size: $spacer * 3.5;
+      margin-bottom: 3.2vh;
+  }
+
+  .github {
+    color: $main_text_color;
+  }
+  .github:hover {
+    color: $light_text_color;
+  }
+  
+  .telegram {
+   color: $main_text_color;
+   padding-left: 1.5vw;
+  }
+  .telegram:hover {
+    color: $light_text_color;
+  }
+  
+  .twitter {
+    color: $main_text_color;
+    padding-left: 1.5vw;
+  }
+  .twitter:hover {
+    color: $light_text_color;
+  }
+  
+  .linkedin {
+    color: $main_text_color;
+    padding-left: 1.5vw;
+  }
+  .linkedin:hover {
+    color: $light_text_color;
+  }
+}
+
+.information {
+    @media screen and (max-width:900px) {
+      display: block;
+      align-items: center;
+   }
+}
+//// end header ////
+
+//// main ////
+//// about ////
+.section-about {
+    margin-left: 13vw;
+    margin-right: 10.6vw;
+    margin-top: 2vh;
+  }
+  .section-title {
+    @include title;
+  }
+  
+  .div-information{
+    min-height: 70vh;
+    background-color: white;
+    @include sectioAbout;
+
+    & > div >h3 {
+        color: $main_text_color;
+        font-size: $spacer * 5.5;
+        padding-bottom: 2vh;
+        padding-top: 1vh;
+      }
+
+      & > div > ul > li > strong{
+        color: $light_text_color;
+        font-size: $spacer * 2.3;
+      }
+    
+      & > div > p {
+        color: $main_text_color;
+        font-size: $spacer * 2.7;
+        padding-top: 2vh;
+      }
+    
+      & > div > .img-about {
+        width: 100%;
+        padding-top: 1vh;
+    
+        @media screen and (max-width:865px) {
+          width: 70%;
+          margin-left: 10vw;
+         }
+      }
+     
+}
+
+.list-themes {
+    position: relative;
+    list-style: none;
+}
+  
+.list-themes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 9px;
+    margin: auto;
+    width: 1px;
+    height: 85%;
+    background-color: $secondary_color;
+}
+  
+.list-theme::before {
+    border-color: $primary_color;
+      content: "";
+      position: absolute;
+      left: 3px;
+      margin: 6px 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid $primary_color ;
+}
+//// end about ////
+
+//// skil ////
+.section-skill {
+ align-items: center;
+ min-height: 40vh;
+ padding: 0 13vw;
+}
+
+.div-skill {
+ & > div {
+    box-shadow: 0 0 0 2px $secondary_color;
+    border-radius: 30px;
+    border: 2px solid #fff;
+}
+
+& > div > div {
+    background-color: $primary_color;
+}
+}
+//// end skil ////
+
+//// portfolio ////
+.myportfolio {
+  color: $light_text_color;
+  font-size: $spacer * 5;
+  font-weight: 500;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  align-items: center;
+  text-align: center;
+}
+
+.menu {
+  min-height: 90vh;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  padding: 10px 0;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+ 
+.div-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer * 6;
+  flex-wrap: wrap;
+}
+
+.div-button {
+  & > button {
+  padding: 10px 30px;
+  text-transform: capitalize;
+  border-radius: $spacer * 1 ;
+  border-color: $primary_color;
+  background-color: $secondary_color;
+  font-size: $spacer * 2;
+  color: $main_text_color;
+  transition: 0.4s;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    flex-grow: 1;
+  }
+  }
+}
+ 
+.div-button {
+  & > button:hover {
+    background-color: $primary_color;
+    color: white;
+  }
+}
+
+.div-button > .active-btn {
+background-color: $primary_color;
+color: white;
+}
+
+.menu-list {
+  min-height: 90vh;
+  width: 100%;
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $spacer * 2;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+   
+  } 
+
+  & > .portfolio-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: calc(43vw - 10vw ) calc(100% - 43vw);
+    grid-gap: $spacer * 8;
+   
+
+    @media screen and (max-width: 1022px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  & > .portfolio-item > img {
+    width: 100%;
+    object-fit: cover;
+    height: 40vh;
+    border: 3px solid $light_text_color;
+    border-radius: $spacer * 4;
+    margin-left: 15px;
+
+    @media  screen and (max-width: 570px) {
+      margin-left: 3px;
+    }
+}
+}
+//// end portfolio ////
+
+/// favorite ////
+.slideshow-favorite {
+  max-width: 1000px;
+  position: relative;
+  margin: 50px auto;
+}
+
+.myphotos {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+//// end favorite /////
+
+//// contact ////
+.div-contact {
+  width: 70%;
+  margin-left: 12.7vw;
+  min-height: 53vh;
+}
+
+.div-email{
+  width: 100%;
+  background: white;
+}
+
+.div-group{
+  padding-bottom: $spacer;
+}
+
+.d-input {
+  border: 1px solid $secondary_color;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+  height: 44px;
+} 
+
+.div-texrarea{
+  border: 1px solid $secondary_color;
+  padding: 10px 12px;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+  margin-bottom: $spacer * 2;
+}
+
+.d-submit {
+  border: 0;
+  padding: 10px 35px;
+  background-color:$secondary_color ;
+  color: $main_text_color;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.d-submit:hover {
+  background: $primary_color;
+  color: white;
+}
+
+input:hover {
+  border-color: $primary_color;
+}
+
+textarea:hover {
+  border-color: $primary_color;
+}
+
+input:focus {
+  border-color: $primary_color;
+}
+//// end contact ////
+//// end main ////
+
+//// footer ////
+.footer {
+  background-color: $light_color;
+  min-height: 26vh;
+  align-items: center;
+  text-align: center;
+}
+
+.social-links-footer {
+  padding-bottom: 3vh;
+  padding-top: 5vh;
+  
+  & > .icons {
+  padding-right: 0.2w;
+}
+}
+
+.line-flower {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3vh;
+}
+
+p > i {
+  color: red;
+}
+//// end footer ////
+
+//// back to top ////
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: $primary_color;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top svg {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+//// end back to top ////
+
+
+//// hamburger ////
+.mobile-nav-toggle{
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 0;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.mobile-nav-toggle svg {
+  color: $primary_color;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle {
+  color: #fff;
+  background-color: $secondary_color;
+}
+//// end hamburger ////

@@ -1,0 +1,44 @@
+@mixin sectioAbout() {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    @media screen and (max-width:865px) {
+       display: block;
+      }
+   }
+   
+@mixin title() {
+       justify-content: center;
+       text-align: center;
+       font-size: $spacer * 5;
+       font-weight: 700;
+       text-transform: uppercase;
+       margin-bottom: 20px;
+       margin-top: 20px;
+       padding-bottom: 20px;
+       position: relative;
+       color: $main_text_color;
+         
+       &::before{
+           content: "";
+           position: absolute;
+           display: block;
+           width: 120px;
+           height: 1px;
+           background: $secondary_color;
+           bottom: 1px;
+           left: calc(50% - 60px);
+       }
+         
+       &::after{
+           content: "";
+           position: absolute;
+           display: block;
+           width: $spacer * 5;
+           height: 3px;
+           background: $primary_color;
+           bottom: 0;
+           left: calc(50% - 20px);
+       }
+}
